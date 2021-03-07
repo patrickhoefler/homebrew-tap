@@ -5,16 +5,16 @@
 class Dockerfilegraph < Formula
   desc "Visualize your multi-stage Dockerfile"
   homepage "https://github.com/patrickhoefler/dockerfilegraph"
-  version "0.3.0"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.3.0/dockerfilegraph_0.3.0_darwin_amd64.tar.gz"
-    sha256 "5e7a8388e6fe17c464b608adead0391937757634a799f4e416c9265895140771"
+    url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.4.0/dockerfilegraph_0.4.0_darwin_amd64.tar.gz"
+    sha256 "70e0dce6374450e93b9470199f366d49231c3d0799c01261baa6d4bfdb1a14af"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.3.0/dockerfilegraph_0.3.0_linux_amd64.tar.gz"
-    sha256 "5f50a153a6171e77e13e1b2c3e7754828f5841f082a7c5d3732e5e3e184e23c7"
+    url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.4.0/dockerfilegraph_0.4.0_linux_amd64.tar.gz"
+    sha256 "acc69e7ffd620f467758bdffe157483034a038844a0ce5c6d08ee39c61ee6725"
   end
 
   depends_on "graphviz"
