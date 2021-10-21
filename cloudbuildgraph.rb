@@ -6,7 +6,6 @@ class Cloudbuildgraph < Formula
   desc "Visualize your Google Cloud Build pipeline"
   homepage "https://github.com/patrickhoefler/cloudbuildgraph"
   version "0.6.4"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

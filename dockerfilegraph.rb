@@ -6,7 +6,6 @@ class Dockerfilegraph < Formula
   desc "Visualize your multi-stage Dockerfile"
   homepage "https://github.com/patrickhoefler/dockerfilegraph"
   version "0.6.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
