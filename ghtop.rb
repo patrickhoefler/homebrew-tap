@@ -6,7 +6,6 @@ class Ghtop < Formula
   desc "Get information about the most starred GitHub repos"
   homepage "https://github.com/patrickhoefler/ghtop"
   version "0.1.8"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
