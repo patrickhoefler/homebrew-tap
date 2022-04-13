@@ -5,23 +5,31 @@
 class Ghtop < Formula
   desc "Get information about the most starred GitHub repos"
   homepage "https://github.com/patrickhoefler/ghtop"
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/ghtop/releases/download/v0.1.9/ghtop_0.1.9_darwin_amd64.tar.gz"
-      sha256 "7eaa1563c601b267d04bc8a70be7008e0e11233e37af14f8ada4b9e15fd860a6"
+    url "https://github.com/patrickhoefler/ghtop/releases/download/v0.1.10/ghtop_0.1.10_darwin_amd64.tar.gz"
+    sha256 "fe7414e64c061c3f6e0cc13a0ec83291fff48af0e7e72518696cce58d3145fd6"
 
-      def install
-        bin.install "ghtop"
+    def install
+      bin.install "ghtop"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Ghtop
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/ghtop/releases/download/v0.1.9/ghtop_0.1.9_linux_amd64.tar.gz"
-      sha256 "c59cb3699ec44775c3928dffe815a49188047c90ace7df79b66c52109321ae9d"
+      url "https://github.com/patrickhoefler/ghtop/releases/download/v0.1.10/ghtop_0.1.10_linux_amd64.tar.gz"
+      sha256 "a867528cd4132715463b4c58e6d4c5cc1326fbfb7eb780f7b5e1faedd108c650"
 
       def install
         bin.install "ghtop"
