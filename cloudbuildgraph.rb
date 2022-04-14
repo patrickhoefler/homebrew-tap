@@ -5,23 +5,31 @@
 class Cloudbuildgraph < Formula
   desc "Visualize your Google Cloud Build pipeline"
   homepage "https://github.com/patrickhoefler/cloudbuildgraph"
-  version "0.6.5"
+  version "0.6.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/cloudbuildgraph/releases/download/v0.6.5/cloudbuildgraph_0.6.5_darwin_amd64.tar.gz"
-      sha256 "379a815dc51f7aacf84991d782b6755541346a0c3b46af97f943f0fdb9c5ebb7"
+    url "https://github.com/patrickhoefler/cloudbuildgraph/releases/download/v0.6.6/cloudbuildgraph_0.6.6_darwin_amd64.tar.gz"
+    sha256 "c5445124ecb28e520c8bed8c5dc26b7605458a166ea6ce93daf8527ef7b2a7cb"
 
-      def install
-        bin.install "cloudbuildgraph"
+    def install
+      bin.install "cloudbuildgraph"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Cloudbuildgraph
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/cloudbuildgraph/releases/download/v0.6.5/cloudbuildgraph_0.6.5_linux_amd64.tar.gz"
-      sha256 "af63210c1b3352d208a887ff91995a0dd8d4133f37b3ae94bd25e22c31551a75"
+      url "https://github.com/patrickhoefler/cloudbuildgraph/releases/download/v0.6.6/cloudbuildgraph_0.6.6_linux_amd64.tar.gz"
+      sha256 "35ca8b83247283b1370500dcda1e295858ab9fbbf3a6ed3315ada7909d72b012"
 
       def install
         bin.install "cloudbuildgraph"
