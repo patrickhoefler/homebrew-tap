@@ -5,11 +5,11 @@
 class Ghtop < Formula
   desc "Get information about the most starred GitHub repos"
   homepage "https://github.com/patrickhoefler/ghtop"
-  version "0.1.10"
+  version "0.1.11"
 
   on_macos do
-    url "https://github.com/patrickhoefler/ghtop/releases/download/v0.1.10/ghtop_0.1.10_darwin_amd64.tar.gz"
-    sha256 "fe7414e64c061c3f6e0cc13a0ec83291fff48af0e7e72518696cce58d3145fd6"
+    url "https://github.com/patrickhoefler/ghtop/releases/download/v0.1.11/ghtop_0.1.11_darwin_amd64.tar.gz"
+    sha256 "b1395916cac0f3818a27f49db24e086d772499c27e0d92352cfff926daab87b2"
 
     def install
       bin.install "ghtop"
@@ -28,8 +28,8 @@ class Ghtop < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/ghtop/releases/download/v0.1.10/ghtop_0.1.10_linux_amd64.tar.gz"
-      sha256 "a867528cd4132715463b4c58e6d4c5cc1326fbfb7eb780f7b5e1faedd108c650"
+      url "https://github.com/patrickhoefler/ghtop/releases/download/v0.1.11/ghtop_0.1.11_linux_amd64.tar.gz"
+      sha256 "865f77ca343cf9a76cb6d6a8ac7daec0868244cbcc29cf20e0f7759698b88385"
 
       def install
         bin.install "ghtop"
