@@ -5,11 +5,11 @@
 class Cloudbuildgraph < Formula
   desc "Visualize your Google Cloud Build pipeline"
   homepage "https://github.com/patrickhoefler/cloudbuildgraph"
-  version "0.6.6"
+  version "0.6.7"
 
   on_macos do
-    url "https://github.com/patrickhoefler/cloudbuildgraph/releases/download/v0.6.6/cloudbuildgraph_0.6.6_darwin_amd64.tar.gz"
-    sha256 "c5445124ecb28e520c8bed8c5dc26b7605458a166ea6ce93daf8527ef7b2a7cb"
+    url "https://github.com/patrickhoefler/cloudbuildgraph/releases/download/v0.6.7/cloudbuildgraph_0.6.7_darwin_amd64.tar.gz"
+    sha256 "1b6c84a35287682a45b56366783460efb2089c5b962d95077006d86dd03989e3"
 
     def install
       bin.install "cloudbuildgraph"
@@ -28,8 +28,8 @@ class Cloudbuildgraph < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/cloudbuildgraph/releases/download/v0.6.6/cloudbuildgraph_0.6.6_linux_amd64.tar.gz"
-      sha256 "35ca8b83247283b1370500dcda1e295858ab9fbbf3a6ed3315ada7909d72b012"
+      url "https://github.com/patrickhoefler/cloudbuildgraph/releases/download/v0.6.7/cloudbuildgraph_0.6.7_linux_amd64.tar.gz"
+      sha256 "8a5280338803d4ee49465ef9354f770617dec2dd46fe80c5aa7f3f03ac19786f"
 
       def install
         bin.install "cloudbuildgraph"
