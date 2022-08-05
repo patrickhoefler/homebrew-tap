@@ -5,11 +5,11 @@
 class Dockerfilegraph < Formula
   desc "Visualize your multi-stage Dockerfile"
   homepage "https://github.com/patrickhoefler/dockerfilegraph"
-  version "0.8.1"
+  version "0.8.2"
 
   on_macos do
-    url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.8.1/dockerfilegraph_0.8.1_darwin_amd64.tar.gz"
-    sha256 "b81f1eba64abbd141082c828aae6d4a2acae877fc500b42dffd834e45771b5ac"
+    url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.8.2/dockerfilegraph_0.8.2_darwin_amd64.tar.gz"
+    sha256 "12d765dfbd355759c5e5e46f27b47e680427eecda4d314b674d356b5b706ce4d"
 
     def install
       bin.install "dockerfilegraph"
@@ -28,8 +28,8 @@ class Dockerfilegraph < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.8.1/dockerfilegraph_0.8.1_linux_amd64.tar.gz"
-      sha256 "4c6f0cf4b64043335bd9613f3028043f88feddbc084fa011ab8dd197981f72ce"
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.8.2/dockerfilegraph_0.8.2_linux_amd64.tar.gz"
+      sha256 "35cc778733f19d3fe39a12dc001dbebabfcfca405545170786470094a8c90450"
 
       def install
         bin.install "dockerfilegraph"
