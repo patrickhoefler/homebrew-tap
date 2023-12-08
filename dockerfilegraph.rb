@@ -5,22 +5,22 @@
 class Dockerfilegraph < Formula
   desc "Visualize your multi-stage Dockerfile"
   homepage "https://github.com/patrickhoefler/dockerfilegraph"
-  version "0.17.4"
+  version "0.17.5"
 
   depends_on "graphviz"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.17.4/dockerfilegraph_0.17.4_darwin_arm64.tar.gz"
-      sha256 "49bbffa009feb364f86be42f5f3d328f4732ea9ae1657ab7fb573feb4187eacb"
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.17.5/dockerfilegraph_0.17.5_darwin_arm64.tar.gz"
+      sha256 "0c42a6730d37488059e5896a2437c11674e3e89ab3c7a1a6c4aca07f9d0e4bed"
 
       def install
         bin.install "dockerfilegraph"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.17.4/dockerfilegraph_0.17.4_darwin_amd64.tar.gz"
-      sha256 "e54d1da68ccef5cd35d7f95c7705033d226745b3750987d23237644c403f93a3"
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.17.5/dockerfilegraph_0.17.5_darwin_amd64.tar.gz"
+      sha256 "769e9fe61bb2973d2a4ea944b306574aa6f4c66c86f9ea08275b7dc2d67d88b9"
 
       def install
         bin.install "dockerfilegraph"
@@ -30,16 +30,16 @@ class Dockerfilegraph < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.17.4/dockerfilegraph_0.17.4_linux_arm64.tar.gz"
-      sha256 "a39c648164268dd339c5fc54f21048d5c5be7a49b143d3ac071720728b0e5745"
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.17.5/dockerfilegraph_0.17.5_linux_arm64.tar.gz"
+      sha256 "14b095d6f9edbfb417af5002e70be7f14adbc5660593c87c48e357c15a98af71"
 
       def install
         bin.install "dockerfilegraph"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.17.4/dockerfilegraph_0.17.4_linux_amd64.tar.gz"
-      sha256 "0e0732c498fa4fab4e4015f079583cae21fc8fa408515419eb97e5c91f666a99"
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.17.5/dockerfilegraph_0.17.5_linux_amd64.tar.gz"
+      sha256 "0de12da635c8d28ac3a6c28083b59a20612cbd3abdb4a58ca932c8aa0bc24e01"
 
       def install
         bin.install "dockerfilegraph"
