@@ -5,22 +5,22 @@
 class Dockerfilegraph < Formula
   desc "Visualize your multi-stage Dockerfile"
   homepage "https://github.com/patrickhoefler/dockerfilegraph"
-  version "0.19.0"
+  version "0.19.1"
 
   depends_on "graphviz"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.19.0/dockerfilegraph_0.19.0_darwin_amd64.tar.gz"
-      sha256 "cfe8d029607c8ecb7b0e1abf2ff476ae46ef625c476d865dbba13c43b67db14a"
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.19.1/dockerfilegraph_0.19.1_darwin_amd64.tar.gz"
+      sha256 "9c39bf3b8cfa9ccb382f2c8e172fe6afecf517b9929f9f818d41c6b76038d8f7"
 
       def install
         bin.install "dockerfilegraph"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.19.0/dockerfilegraph_0.19.0_darwin_arm64.tar.gz"
-      sha256 "e6ab05b674fa6ef9efa76ebe679df3d221af40e7dbaaa10f4c6849c96bc905b8"
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.19.1/dockerfilegraph_0.19.1_darwin_arm64.tar.gz"
+      sha256 "46d4bb7fa07ae0c51d76d3ca199c466ef2cdc5fa4905f03a146721783e2f6b1b"
 
       def install
         bin.install "dockerfilegraph"
@@ -29,16 +29,16 @@ class Dockerfilegraph < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.19.0/dockerfilegraph_0.19.0_linux_amd64.tar.gz"
-      sha256 "7f3059ec3e29b0bdc8c168d440aa523eab71fedb1da44a3966379f2a1b9e8f49"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.19.1/dockerfilegraph_0.19.1_linux_amd64.tar.gz"
+      sha256 "a58ca2ce5692e44a9696b2f58fff53290877db3c3faf29808d0ea98ebdd23e84"
       def install
         bin.install "dockerfilegraph"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.19.0/dockerfilegraph_0.19.0_linux_arm64.tar.gz"
-      sha256 "51a53cf16c6e824d939e35210ca15c2b1408725c4c3d51081af336c0bfa7e914"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/patrickhoefler/dockerfilegraph/releases/download/v0.19.1/dockerfilegraph_0.19.1_linux_arm64.tar.gz"
+      sha256 "7f0627913987caf6c4c9a327c5429426c1f9f103ad48eb6ee66ec6faba0dd710"
       def install
         bin.install "dockerfilegraph"
       end
